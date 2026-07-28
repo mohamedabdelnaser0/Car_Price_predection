@@ -2,20 +2,24 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-import pickle
-
-
-# ======================
-# Load Model
-# ======================
 from huggingface_hub import hf_hub_download
-import joblib
+
+# ======================
+# Load Model from Hugging Face
+# ======================
 
 model_path = hf_hub_download(
     repo_id="mohamed22264/car_price_model",
     filename="car_price_model.pkl"
 )
 
+scaler_path = hf_hub_download(
+    repo_id="mohamed22264/car_price_model",
+    filename="scaler.pkl"
+)
+
+model = joblib.load(model_path)
+scaler = joblib.load(scaler_path)
 
 
 
