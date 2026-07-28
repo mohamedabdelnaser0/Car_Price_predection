@@ -24,7 +24,7 @@ model_path = hf_hub_download(
 # ======================
 
 st.set_page_config(
-    page_title="Car Price Predictor",
+    page_title="Car Price Predictor by eng:Abdelnaser",
     page_icon="🚗",
     layout="wide"
 )
